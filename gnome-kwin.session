@@ -1,0 +1,4 @@
+[GNOME Session]
+Name=GNOME with KWin
+RequiredComponents=gnome-panel;gnome-settings-daemon;gnome-screensaver;kwin;
+DesktopName=GNOME

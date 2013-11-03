@@ -1,0 +1,3 @@
+gnome-kwin.desktop /usr/share/xsessions
+gnome-kwin.session /usr/share/gnome-session/sessions
+kwin.desktop /usr/share/applications

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=GNOME with KWin
+Comment=This session logs you into GNOME with the traditional panel and KWin
+Exec=gnome-session --session=gnome-kwin
+TryExec=gnome-session
+Icon=
+Type=Application
+X-LightDM-DesktopName=GNOME
+X-Ubuntu-Gettext-Domain=gnome-panel-3.0

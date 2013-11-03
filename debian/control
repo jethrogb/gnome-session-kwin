@@ -1,0 +1,15 @@
+Source: gnome-session-kwin
+Section: x11
+Priority: extra
+Maintainer: Jethro Beekman <jethro@jbeekman.nl>
+Build-Depends: cdbs (>= 0.4.85~), debhelper (>= 8~), dh-autoreconf, pkg-config, libsm-dev
+Standards-Version: 3.9.2
+Vcs-Git: git://github.com/jethrogb/gnome-session-kwin.git
+Vcs-Browser: https://github.com/jethrogb/gnome-session-kwin
+
+Package: gnome-session-kwin
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, gnome-session, kde-window-manager
+Description: GNOME Session Manager - Classic GNOME with KWin
+ Configuration files and helper program to run classic GNOME with the KWin
+ window manager.
