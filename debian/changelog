@@ -1,3 +1,9 @@
+gnome-session-kwin (20131109.0) saucy; urgency=low
+
+  * Apply cursor theme to root window
+
+ -- Jethro Beekman <jethro@jbeekman.nl>  Sat, 09 Nov 2013 14:41:22 -0800
+
 gnome-session-kwin (20131102.1) saucy; urgency=low
 
   * Initial release.

@@ -1,4 +1,4 @@
-AC_INIT([kwin-gnome-helper], [20131102.1])
+AC_INIT([kwin-gnome-helper], [20131109.0])
 AM_INIT_AUTOMAKE([foreign subdir-objects])
 AC_CONFIG_SRCDIR([configure.ac])
 

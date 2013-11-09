@@ -27,8 +27,30 @@
 #include <sys/types.h>
 #include <unistd.h>
 
+#define DEFAULT_CURSOR "left_ptr"
+
 static void set_cursor_theme(const char* pname)
 {
+	const char* DISPLAY=getenv("DISPLAY");
+	Display *dpy=XOpenDisplay(DISPLAY);
+	if (dpy)
+	{
+		Cursor cur=XcursorLibraryLoadCursor(dpy, DEFAULT_CURSOR);
+		if (cur)
+		{
+			XDefineCursor(dpy, DefaultRootWindow(dpy), cur);
+			XFreeCursor(dpy, cur);
+		}
+		else
+		{
+			fprintf(stderr,"%s[%d] Unable to load cursor %s on display %s\n",pname,getpid(),DEFAULT_CURSOR,DisplayString(dpy));
+		}
+		XCloseDisplay(dpy);
+	}
+	else
+	{
+		fprintf(stderr,"%s[%d] Unable open display %s\n",pname,getpid(),DISPLAY);
+	}
 }
 
 static int sm_connect_launch_kwin(const char* pname, int argc, char** argv, char** envp)
