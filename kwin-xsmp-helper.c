@@ -16,6 +16,9 @@
  * Public License version 3 can be found in "/usr/share/common-licenses/GPL-3".
  */
 
+// for execvpe()
+#define _GNU_SOURCE
+
 #include <X11/SM/SMlib.h>
 #include <stdlib.h>
 #include <stdio.h>
