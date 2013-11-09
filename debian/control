@@ -2,7 +2,7 @@ Source: gnome-session-kwin
 Section: x11
 Priority: extra
 Maintainer: Jethro Beekman <jethro@jbeekman.nl>
-Build-Depends: cdbs (>= 0.4.85~), debhelper (>= 8~), dh-autoreconf, pkg-config, libsm-dev
+Build-Depends: cdbs (>= 0.4.85~), debhelper (>= 8~), dh-autoreconf, pkg-config, libsm-dev, libxcursor-dev, libx11-dev
 Standards-Version: 3.9.2
 Vcs-Git: git://github.com/jethrogb/gnome-session-kwin.git
 Vcs-Browser: https://github.com/jethrogb/gnome-session-kwin

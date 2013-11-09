@@ -1,4 +1,4 @@
-gnome-session-kwin (20131109.0) saucy; urgency=low
+gnome-session-kwin (20131109.1) saucy; urgency=low
 
   * Apply cursor theme to root window
 
