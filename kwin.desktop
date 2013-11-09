@@ -39,7 +39,7 @@ Name[tr]=KWin
 Name[uk]=KWin
 Name[zh_CN]=KWin
 Name[zh_TW]=KWin
-Exec=kwin-xsmp-helper
+Exec=kwin-gnome-helper
 NoDisplay=true
 # name of loadable control center module
 X-GNOME-WMSettingsModule=kwin

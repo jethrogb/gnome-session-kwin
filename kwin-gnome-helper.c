@@ -19,15 +19,20 @@
 // for execvpe()
 #define _GNU_SOURCE
 
+#include <X11/Xlib.h>
+#include <X11/Xcursor/Xcursor.h>
 #include <X11/SM/SMlib.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <sys/types.h>
 #include <unistd.h>
 
-int main(int argc, char** argv, char** envp)
+static void set_cursor_theme(const char* pname)
 {
-	const char* pname=argv[0];
+}
+
+static int sm_connect_launch_kwin(const char* pname, int argc, char** argv, char** envp)
+{
 	char* id=NULL;
 	char err[256]={0};
 	SmcConn conn=SmcOpenConnection(NULL, NULL, 1, 0, 0, NULL, getenv("DESKTOP_AUTOSTART_ID"), &id, 255, err);
@@ -47,4 +52,11 @@ int main(int argc, char** argv, char** envp)
 		fprintf(stderr,"%s[%d] SmcOpenConnection error: %s\n",pname,getpid(),err);
 		return 1;
 	}
+}
+
+int main(int argc, char** argv, char** envp)
+{
+	set_cursor_theme(argv[0]);
+	
+	return sm_connect_launch_kwin(argv[0],argc,argv,envp);
 }
